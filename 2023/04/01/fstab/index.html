@@ -14,16 +14,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://george0909.github.io/archives/"/>
+    <link rel="canonical" href="https://george0909.github.io/2023/04/01/fstab/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://george0909.github.io/archives/index.html">
+        <meta name="description" content="mount device12345678910lsblkmkfs.ext4 -m 0 -E lazy_itable_init&#x3D;0,lazy_journal_init&#x3D;0,discard &#x2F;dev&#x2F;DEVICE_NAMEmkdir -p &#x2F;mnt&#x2F;disks&#x2F;MOUNT_DIRmount -o discard,defaults &#x2F;dev&#x2F;DEVICE_NAME &#x2F;mnt&#x2F;disks&#x2F;MOUNT_DI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fstab">
+<meta property="og:url" content="https://george0909.github.io/2023/04/01/fstab/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="mount device12345678910lsblkmkfs.ext4 -m 0 -E lazy_itable_init&#x3D;0,lazy_journal_init&#x3D;0,discard &#x2F;dev&#x2F;DEVICE_NAMEmkdir -p &#x2F;mnt&#x2F;disks&#x2F;MOUNT_DIRmount -o discard,defaults &#x2F;dev&#x2F;DEVICE_NAME &#x2F;mnt&#x2F;disks&#x2F;MOUNT_DI">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-04-01T08:57:29.000Z">
+<meta property="article:modified_time" content="2023-04-01T09:00:18.535Z">
 <meta property="article:author" content="George X">
 <meta name="twitter:card" content="summary">
     
@@ -36,7 +40,7 @@
     
     <title>
         
-            Archive -
+            fstab -
         
         Theme Redefine
     </title>
@@ -183,72 +187,202 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">fstab</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">The Redefine Team</span>
+                            
+                                <span class="author-label"></span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-04-01 15:57:29</span>
+        <span class="mobile">2023-04-01 15:57</span>
+        <span class="hover-info">Created</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[8]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='04-01'>
-                <a href="/2023/04/01/efk/">
-                  <span class="article-title">efk</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-01'>
-                <a href="/2023/04/01/fstab/">
-                  <span class="article-title">fstab</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='04-01'>
-                <a href="/2023/04/01/sublime-text/">
-                  <span class="article-title">sublime-text</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-31'>
-                <a href="/2023/03/31/rabbitmq/">
-                  <span class="article-title">rabbitmq</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-31'>
-                <a href="/2023/03/31/kubectl/">
-                  <span class="article-title">kubectl</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-31'>
-                <a href="/2023/03/31/markdown/">
-                  <span class="article-title">markdown</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-31'>
-                <a href="/2023/03/31/Hexo-Setup/">
-                  <span class="article-title">Hexo Setup</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-30'>
-                <a href="/2023/03/30/hello-world/">
-                  <span class="article-title">Hello World</span>
-                </a>
-              </li>
-              
-            </ul>
-        </section>
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-04-01 16:18</span>
+            <span class="mobile">2023-04-01 16</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h3 id="mount-device"><a href="#mount-device" class="headerlink" title="mount device"></a>mount device</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">lsblk</span><br><span class="line">mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/DEVICE_NAME</span><br><span class="line"></span><br><span class="line">mkdir -p /mnt/disks/MOUNT_DIR</span><br><span class="line"></span><br><span class="line">mount -o discard,defaults /dev/DEVICE_NAME /mnt/disks/MOUNT_DIR</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">blkid /dev/DEVICE_NAME</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="config-x2F-etc-x2F-fstab"><a href="#config-x2F-etc-x2F-fstab" class="headerlink" title="config &#x2F;etc&#x2F;fstab"></a>config &#x2F;etc&#x2F;fstab</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UUID=UUID_VALUE /mnt/disks/MOUNT_DIR ext4 discard,defaults,nofail 0 2</span><br></pre></td></tr></table></figure></div>
+<p>or</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UUID=UUID_VALUE /mnt/disks/MOUNT_DIR ext4 discard,defaults,nobootwait 0 2</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> fstab</li>
+        <li><strong>Author:</strong> The Redefine Team</li>
+        <li><strong>Created at:</strong> 2023-04-01 15:57:29</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-04-01 16:00:18
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/04/01/fstab/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/04/01/efk/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">efk</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/04/01/sublime-text/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">sublime-text</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">fstab</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mount-device"><span class="nav-text">mount device</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config-x2F-etc-x2F-fstab"><span class="nav-text">config &#x2F;etc&#x2F;fstab</span></a></li></ol>
+
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -324,6 +458,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -434,6 +589,16 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 
