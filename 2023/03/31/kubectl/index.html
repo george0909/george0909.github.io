@@ -19,15 +19,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="set default ns12kubectl config current-contextkubectl config set-context $(kubectl config current-context) --namespace&#x3D;example-namespace  get secret1kubeclt get secrets&#x2F;mongo-secret -o json | jq &amp;#x27">
+        <meta name="description" content="install12curl -LO &quot;https:&#x2F;&#x2F;dl.k8s.io&#x2F;release&#x2F;v1.25.4bin&#x2F;darwin&#x2F;arm64&#x2F;kubectl   set default ns12kubectl config current-contextkubectl config set-context $(kubectl config current-context) --namespa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kubeclt">
 <meta property="og:url" content="https://george0909.github.io/2023/03/31/kubectl/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="set default ns12kubectl config current-contextkubectl config set-context $(kubectl config current-context) --namespace&#x3D;example-namespace  get secret1kubeclt get secrets&#x2F;mongo-secret -o json | jq &amp;#x27">
+<meta property="og:description" content="install12curl -LO &quot;https:&#x2F;&#x2F;dl.k8s.io&#x2F;release&#x2F;v1.25.4bin&#x2F;darwin&#x2F;arm64&#x2F;kubectl   set default ns12kubectl config current-contextkubectl config set-context $(kubectl config current-context) --namespa">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-31T13:32:07.000Z">
-<meta property="article:modified_time" content="2023-04-03T03:31:43.308Z">
+<meta property="article:modified_time" content="2023-04-03T09:58:33.897Z">
 <meta property="article:author" content="George X">
 <meta property="article:tag" content="k8s">
 <meta name="twitter:card" content="summary">
@@ -317,8 +317,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-04-03 10:31:43</span>
-            <span class="mobile">2023-04-03 10:31</span>
+            <span class="desktop">2023-04-03 16:58:33</span>
+            <span class="mobile">2023-04-03 16:58</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -349,11 +349,16 @@
             
 
             <div class="article-content markdown-body">
-                <h3 id="set-default-ns"><a href="#set-default-ns" class="headerlink" title="set default ns"></a>set default ns</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl config current-context</span><br><span class="line">kubectl config set-context $(kubectl config current-context) --namespace=example-namespace</span><br></pre></td></tr></table></figure></div>
+                <h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -LO &quot;https://dl.k8s.io/release/v1.25.4bin/darwin/arm64/kubectl</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="set-default-ns"><a href="#set-default-ns" class="headerlink" title="set default ns"></a>set default ns</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl config current-context</span><br><span class="line">kubectl config set-context $(kubectl config current-context) --namespace=example-namespace</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="get-secret"><a href="#get-secret" class="headerlink" title="get secret"></a>get secret</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeclt get secrets/mongo-secret -o json | jq &#x27;.data | map_values(@base64d)&#x27;</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="scale"><a href="#scale" class="headerlink" title="scale"></a>scale</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for file in $(kubectl -n livegame get deployments.apps | grep 1/1 | awk &#x27;&#123;print $1&#125;&#x27; | sed &#x27;s/-deployment//&#x27;) \</span><br><span class="line">do \</span><br><span class="line">kubectl scale --replicas=3 -f $&#123;file&#125;.yml\</span><br><span class="line">done</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
             </div>
 
             
@@ -365,7 +370,7 @@
         <li><strong>Created at:</strong> 2023-03-31 20:32:07</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-04-03 10:31:43
+                <strong>Updated at:</strong> 2023-04-03 16:58:33
             </li>
         
         <li>
@@ -483,7 +488,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">kubeclt</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#set-default-ns"><span class="nav-text">set default ns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-secret"><span class="nav-text">get secret</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scale"><span class="nav-text">scale</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#install"><span class="nav-text">install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-default-ns"><span class="nav-text">set default ns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-secret"><span class="nav-text">get secret</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scale"><span class="nav-text">scale</span></a></li></ol>
 
     </div>
 </div>
