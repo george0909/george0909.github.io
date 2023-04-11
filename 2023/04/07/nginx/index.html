@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="The Redefine Team">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://george0909.github.io/2023/04/07/nginx/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="install ansible yaml 123456789101112131415161718192021222324252627282930---  - hosts: hqq-dev-proxy-01    gather_facts: no    become: yes    become_user: root    become_method: sudo    vars:      a: 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx">
+<meta property="og:url" content="https://george0909.github.io/2023/04/07/nginx/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="install ansible yaml 123456789101112131415161718192021222324252627282930---  - hosts: hqq-dev-proxy-01    gather_facts: no    become: yes    become_user: root    become_method: sudo    vars:      a: 1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-04-07T08:50:28.000Z">
+<meta property="article:modified_time" content="2023-04-07T09:02:38.631Z">
+<meta property="article:author" content="George X">
+<meta property="article:tag" content="middleware">
+<meta name="twitter:card" content="summary">
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            nginx -
+        
+        Theme Redefine
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/assets/fonts.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"george0909.github.io","root":"/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[""]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true},"home_banner":{"enable":true,"image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"audios":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Github":"https://github.com/george0909","Blog":"https://george0909.github.io"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Theme Redefine
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        ARCHIVES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/george0909">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="https://george0909.github.io">BLOG
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                ARCHIVES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/george0909">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="https://george0909.github.io">BLOG</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">nginx</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">The Redefine Team</span>
+                            
+                                <span class="author-label"></span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-04-07 15:50:28</span>
+        <span class="mobile">2023-04-07 15:50</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-04-07 16:02:38</span>
+            <span class="mobile">2023-04-07 16:02</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/middleware/">middleware</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><ul>
+<li><p>ansible yaml</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">hqq-dev-proxy-01</span></span><br><span class="line">    <span class="attr">gather_facts:</span> <span class="literal">no</span></span><br><span class="line">    <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">    <span class="attr">become_user:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">become_method:</span> <span class="string">sudo</span></span><br><span class="line">    <span class="attr">vars:</span></span><br><span class="line">      <span class="attr">a:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">tasks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span> <span class="string">repo</span> <span class="string">copy</span></span><br><span class="line">        <span class="attr">template:</span></span><br><span class="line">          <span class="attr">src:</span> <span class="string">nginx/nginx.repo</span></span><br><span class="line">          <span class="attr">dest:</span> <span class="string">/etc/yum.repos.d/nginx.repo</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span> <span class="string">install</span></span><br><span class="line">        <span class="attr">yum:</span></span><br><span class="line">          <span class="attr">name:</span> [<span class="string">&#x27;nginx-module-geoip&#x27;</span>, <span class="string">&#x27;nginx&#x27;</span>]</span><br><span class="line">          <span class="attr">state:</span> <span class="string">present</span></span><br><span class="line">          <span class="attr">update_cache:</span> <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">service</span> <span class="string">reload</span></span><br><span class="line">        <span class="attr">systemd:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">          <span class="attr">state:</span> <span class="string">reload</span></span><br><span class="line">          <span class="attr">enabled:</span> <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># - de<span class="doctag">bug:</span></span></span><br><span class="line">      <span class="comment">#     var: result</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>nginx.repo</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line"></span><br><span class="line">```conf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### config</span><br><span class="line"></span><br><span class="line">- nginx.conf</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>#load_module modules&#x2F;ngx_http_geoip_module.so;<br>load_module modules&#x2F;ngx_http_geoip_module-debug.so;<br>user  nginx;<br>worker_processes auto;</p>
+<p>error_log  &#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log;<br>pid        &#x2F;var&#x2F;run&#x2F;nginx.pid;<br>worker_rlimit_nofile 512000;</p>
+<p>events {<br>    use epoll;<br>    worker_connections  512000;<br>    multi_accept on;</p>
+<p>}<br>http<br>    {<br>        include       mime.types;<br>        default_type  application&#x2F;octet-stream;</p>
+<pre><code>    #geoip_country  /usr/share/GeoIP/GeoLiteCountry.dat;
+    #geoip_city    /usr/share/GeoIP/GeoLiteCity.dat;
+
+    fastcgi_param GEOIP_CITY_COUNTRY_CODE $geoip_city_country_code;
+    fastcgi_param GEOIP_CITY_COUNTRY_CODE3 $geoip_city_country_code3;
+    fastcgi_param GEOIP_CITY_COUNTRY_NAME $geoip_city_country_name;
+    fastcgi_param GEOIP_REGION $geoip_region;
+    fastcgi_param GEOIP_CITY $geoip_city;
+    fastcgi_param GEOIP_POSTAL_CODE $geoip_postal_code;
+    fastcgi_param GEOIP_CITY_CONTINENT_CODE $geoip_city_continent_code;
+    fastcgi_param GEOIP_LATITUDE $geoip_latitude;
+    fastcgi_param GEOIP_LONGITUDE $geoip_longitude;
+
+    server_names_hash_bucket_size 512;
+    client_header_buffer_size 32k;
+    large_client_header_buffers 4 32k;
+    client_max_body_size 50m;
+    proxy_headers_hash_max_size 51200;
+    proxy_headers_hash_bucket_size 6400;
+
+
+    sendfile   on;
+    tcp_nopush on;
+
+    keepalive_timeout 60;
+    tcp_nodelay on;
+
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 256k;
+
+    gzip on;
+    gzip_min_length  1k;
+    gzip_buffers     4 16k;
+    gzip_http_version 1.1;
+    gzip_comp_level 2;
+    gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml application/xml+rss;
+    gzip_vary on;
+    gzip_proxied   expired no-cache no-store private auth;
+    gzip_disable   &quot;MSIE [1-6]\.&quot;;
+
+    #limit_conn_zone $binary_remote_addr zone=perip:10m;
+    ##If enable limit_conn_zone,add &quot;limit_conn perip 10;&quot; to server section.
+
+    server_tokens off;
+
+    set_real_ip_from 0.0.0.0/0;
+    real_ip_header  X-Forwarded-For;
+    log_format  main  &#39;$remote_addr $http_x_forwarded_for [$time_local] &quot;$request&quot; &#39;
+    &#39;$status $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; &#39;
+    &#39;$request_time $upstream_response_time $host $server_port    &quot;$geoip_country_name&quot;  - &quot;$geoip_region&quot;  - &quot;$geoip_city&quot;&#39;;
+
+    log_format  json escape=json
+    &#39;&#123;&quot;timestamp&quot;:&quot;$time_local&quot;,&#39;
+    &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;
+    &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;
+    &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;
+    &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;
+    &#39;&quot;upstream_response_time&quot;:&quot;$upstream_response_time&quot; ,&#39;
+    &#39;&quot;upstream_addr&quot;: &quot;$upstream_addr&quot;, &#39;
+    &#39;&quot;status&quot;: &quot;$status&quot;, &#39;
+    &#39;&quot;request&quot;: &quot;$request&quot;, &#39;
+    &#39;&quot;request_body&quot;: &quot;$request_body&quot;,&#39;
+    &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;
+    &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;
+    &#39;&quot;body_bytes_sent&quot;:&quot;$body_bytes_sent&quot;, &#39;
+    &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;
+    #&#39;&quot;http_cdn_src_ip&quot;: &quot;$http_cdn_src_ip&quot;, &#39;
+    &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot;, &#39;
+    &#39;&quot;request_host&quot;: &quot;$host&quot;, &#39;
+    &#39;&quot;scheme&quot;: &quot;$scheme&quot;, &#39;
+    &#39;&quot;country_name&quot;: &quot;$geoip_country_name&quot;, &#39;
+    &#39;&quot;region&quot;: &quot;$geoip_region&quot;, &#39;
+    &#39;&quot;cityname&quot;: &quot;$geoip_city&quot;&#39;
+    #&#39;&quot;$name&quot;: &quot;$value&quot;&#39;
+    &#39;&#125;&#39;;
+
+
+    log_format  platform
+    &#39;&#123;&quot;timestamp&quot;:&quot;$time_local&quot;,&#39;
+    &#39;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#39;
+    &#39;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#39;
+    &#39;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#39;
+    &#39;&quot;request_time&quot;: &quot;$request_time&quot;, &#39;
+    &#39;&quot;upstream_response_time&quot;:&quot;$upstream_response_time&quot; ,&#39;
+    &#39;&quot;upstream_addr&quot;: &quot;$upstream_addr&quot;, &#39;
+    &#39;&quot;status&quot;: &quot;$status&quot;, &#39;
+    &#39;&quot;request&quot;: &quot;$request&quot;, &#39;
+    &#39;&quot;request_body&quot;: &quot;$request_body&quot;,&#39;
+    &#39;&quot;request_method&quot;: &quot;$request_method&quot;, &#39;
+    &#39;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#39;
+    &#39;&quot;body_bytes_sent&quot;:&quot;$body_bytes_sent&quot;, &#39;
+    &#39;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#39;
+    #&#39;&quot;http_cdn_src_ip&quot;: &quot;$http_cdn_src_ip&quot;, &#39;
+    &#39;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot;, &#39;
+    &#39;&quot;request_host&quot;: &quot;$host&quot;, &#39;
+    &#39;&quot;country_name&quot;: &quot;$geoip_country_name&quot;, &#39;
+    &#39;&quot;region&quot;: &quot;$geoip_region&quot;, &#39;
+    &#39;&quot;cityname&quot;: &quot;$geoip_city&quot;, &#39;
+    &#39;&quot;hostname&quot;: &quot;$hostname&quot; &#39;
+    &#39;&quot;location_proxy&quot;: &quot;$http_location_proxy&quot; &#39;
+    &#39;&#125;&#39;;
+
+
+    access_log /var/log/nginx/access.log;
+
+    include conf.d/*.conf;
+</code></pre>
+<p>}</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- location</span><br><span class="line"></span><br><span class="line">```conf</span><br><span class="line"></span><br><span class="line">https://www.jianshu.com/p/a16936455018</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>fastcgi_param</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fastcgi_param GEOIP_CITY_COUNTRY_CODE $geoip_city_country_code;</span><br><span class="line">fastcgi_param GEOIP_CITY_COUNTRY_CODE3 $geoip_city_country_code3;</span><br><span class="line">fastcgi_param GEOIP_CITY_COUNTRY_NAME $geoip_city_country_name;</span><br><span class="line">fastcgi_param GEOIP_REGION $geoip_region;</span><br><span class="line">fastcgi_param GEOIP_CITY $geoip_city;</span><br><span class="line">fastcgi_param GEOIP_POSTAL_CODE $geoip_postal_code;</span><br><span class="line">fastcgi_param GEOIP_CITY_CONTINENT_CODE $geoip_city_continent_code;</span><br><span class="line">fastcgi_param GEOIP_LATITUDE $geoip_latitude;</span><br><span class="line">fastcgi_param GEOIP_LONGITUDE $geoip_longitude;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+</li>
+<li><p>proxy_set_header</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header  X-Client-Verify SUCCESS;</span><br><span class="line">proxy_set_header  X-Client-DN   $ssl_client_s_dn;</span><br><span class="line">proxy_set_header  X-SSL-Subject  $ssl_client_s_dn;</span><br><span class="line">proxy_set_header  X-SSL-Issuer   $ssl_client_i_dn;</span><br><span class="line">proxy_set_header  Upgrade     $http_upgrade;</span><br><span class="line">proxy_set_header  Connection    &quot;upgrade&quot;;</span><br><span class="line">proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">proxy_set_header X-Real-PORT $remote_port;</span><br><span class="line">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">proxy_set_header Host $host;</span><br><span class="line">proxy_set_header Scheme $scheme;</span><br><span class="line">proxy_set_header Server-Protocol $server_protocol;</span><br><span class="line">proxy_set_header Server-Name $server_name;</span><br><span class="line">proxy_set_header Server-Addr $server_addr;</span><br><span class="line">proxy_set_header Server-Port $server_port;</span><br><span class="line">proxy_http_version 1.1;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<ul>
+<li><p>geoip</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[ref1](https://dev.maxmind.com/geoip/)</span><br><span class="line">[ref2](https://github.com/leev/ngx_http_geoip2_module/blob/master/README.md#installing)</span><br><span class="line">[ref3](https://medium.com/@karljohnson/geoip-discontinuation-upgrade-to-geoip2-with-nginxon-centos-c2a3dbcf8fd)</span><br><span class="line"></span><br><span class="line">yum -y install https://repo.aerisnetwork.com/pub/aeris-release-7.rpm</span><br><span class="line">yum install nginx-more</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">load_module modules/ngx_http_geoip_module-debug.so;</span><br><span class="line"></span><br><span class="line">geoip_country  /usr/share/GeoIP/GeoLiteCountry.dat;</span><br><span class="line">geoip_city    /usr/share/GeoIP/GeoLiteCity.dat;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+<li><p>monitoring</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /nginx_status &#123;</span><br><span class="line">        stub_status;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>amplify</p>
+</li>
+<li><p>add_header</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;</span><br><span class="line">add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, OPTIONS&#x27;;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>proxy_set_header</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header   Host $host;</span><br><span class="line">proxy_set_header X-Scheme $scheme;</span><br><span class="line">proxy_set_header    X-Forwarded-For  $proxy_add_x_forwarded_for;</span><br><span class="line"></span><br><span class="line">proxy_set_header X-Forwarded-Proto      $pass_access_scheme;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>ulimit</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker_rlimit_nofile    50000;</span><br></pre></td></tr></table></figure></div>
+
+<p>&#x2F;etc&#x2F;security&#x2F;limits.d&#x2F;nginx-limits.conf</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx soft nofile 30000</span><br><span class="line">nginx hard nofile 50000</span><br></pre></td></tr></table></figure></div>
+
+
+<ul>
+<li>geoip</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">load_module modules/ngx_http_geoip_module.so;</span><br><span class="line"></span><br><span class="line">geoip_country       /etc/nginx/geoip/GeoIP.dat;</span><br><span class="line">geoip_city          /etc/nginx/geoip/GeoLiteCity.dat;</span><br><span class="line">geoip_org           /etc/nginx/geoip/GeoIPASNum.dat;</span><br><span class="line">geoip_proxy_recursive on;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>gzip</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    gzip on;</span><br><span class="line">gzip_comp_level 5;</span><br><span class="line">gzip_http_version 1.1;</span><br><span class="line">gzip_min_length 256;</span><br><span class="line">gzip_types application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/javascript text/plain text/x-component;</span><br><span class="line">gzip_proxied any;</span><br><span class="line">gzip_vary on;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>log format</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">log_format  json escape=json</span><br><span class="line">        &#x27;&#123;&quot;timestamp&quot;:&quot;$time_local&quot;,&#x27;</span><br><span class="line">        &#x27;&quot;remote_addr&quot;: &quot;$remote_addr&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;remote_user&quot;: &quot;$remote_user&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;body_bytes_sent&quot;: &quot;$body_bytes_sent&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;request_time&quot;: &quot;$request_time&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;upstream_response_time&quot;:&quot;$upstream_response_time&quot; ,&#x27;</span><br><span class="line">        &#x27;&quot;upstream_addr&quot;: &quot;$upstream_addr&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;status&quot;: &quot;$status&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;request&quot;: &quot;$request&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;request_body&quot;: &quot;$request_body&quot;,&#x27;</span><br><span class="line">        &#x27;&quot;request_method&quot;: &quot;$request_method&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;http_referrer&quot;: &quot;$http_referer&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;body_bytes_sent&quot;:&quot;$body_bytes_sent&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;http_x_forwarded_for&quot;: &quot;$http_x_forwarded_for&quot;, &#x27;</span><br><span class="line">        #&#x27;&quot;http_cdn_src_ip&quot;: &quot;$http_cdn_src_ip&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;http_user_agent&quot;: &quot;$http_user_agent&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;request_host&quot;: &quot;$host&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;scheme&quot;: &quot;$scheme&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;country_name&quot;: &quot;$geoip_country_name&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;region&quot;: &quot;$geoip_org&quot;, &#x27;</span><br><span class="line">        &#x27;&quot;cityname&quot;: &quot;$geoip_city&quot;&#x27;</span><br><span class="line">        #&#x27;&quot;$name&quot;: &quot;$value&quot;&#x27;</span><br><span class="line">        &#x27;&#125;&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="module-install"><a href="#module-install" class="headerlink" title="module install"></a>module install</h3><h4 id="geoip-module"><a href="#geoip-module" class="headerlink" title="geoip_module"></a>geoip_module</h4><ol>
+<li>install<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx-plus-module-njs</span><br></pre></td></tr></table></figure></div></li>
+<li>config<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load_module ngx_stream_proxy_module</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h4 id="apt-get-install-nginx-module-geoip"><a href="#apt-get-install-nginx-module-geoip" class="headerlink" title="apt-get install nginx-module-geoip"></a>apt-get install nginx-module-geoip</h4><ol>
+<li><p>install</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx-module-geoip</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>config</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load_module &quot;modules/ngx_http_geoip_module.so&quot;;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> nginx</li>
+        <li><strong>Author:</strong> The Redefine Team</li>
+        <li><strong>Created at:</strong> 2023-04-07 15:50:28</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-04-07 16:02:38
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://george0909.github.io/2023/04/07/nginx/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/middleware/">#middleware</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/04/07/live/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">live</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/04/06/jq-md/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">jq.md</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">nginx</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#install"><span class="nav-text">install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#module-install"><span class="nav-text">module install</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.0</a>
+        </div>
+        
+        
+        
+            <div id="start_div" style="display:none">
+                2022/8/17 11:45:14
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/layouts/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
